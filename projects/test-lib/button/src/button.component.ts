@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { TranslatePipe } from 'test-lib/i18n';
 
 @Component({
@@ -7,7 +7,8 @@ import { TranslatePipe } from 'test-lib/i18n';
   standalone: true,
   imports: [CommonModule, TranslatePipe],
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.css'],
+  styleUrl: './button.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
   @Input() label = 'Click me';

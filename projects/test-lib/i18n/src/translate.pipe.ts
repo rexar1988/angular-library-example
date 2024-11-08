@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, type PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'translate',
@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TranslatePipe implements PipeTransform {
   transform(value: string): unknown {
-    // Here you would translate the key
     return `${value} (translated)`;
   }
 }

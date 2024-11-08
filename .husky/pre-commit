@@ -1,0 +1,2 @@
+npx stylelint "**/*.{css,scss}"
+ng lint
